@@ -40,12 +40,6 @@ const ContactSection = () => {
       value: "linkedin.com/in/piyush-kumar-sodhi-104b6b307",
       href: "https://linkedin.com/in/piyush-kumar-sodhi-104b6b307"
     },
-    {
-      icon: <ExternalLink className="w-5 h-5" />,
-      label: "Portfolio",
-      value: "piyush-sodhi.vercel.app",
-      href: "https://piyush-sodhi.vercel.app"
-    }
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

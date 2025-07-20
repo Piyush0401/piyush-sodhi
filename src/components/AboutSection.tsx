@@ -119,40 +119,6 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Stats Row */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-              <GraduationCap className="h-8 w-8 text-primary-foreground" />
-            </div>
-            <h3 className="text-2xl font-bold text-foreground">50+</h3>
-            <p className="text-muted-foreground">Complete Project</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-              <Award className="h-8 w-8 text-accent-foreground" />
-            </div>
-            <h3 className="text-2xl font-bold text-foreground">3+</h3>
-            <p className="text-muted-foreground">Years of Experience</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-              <Globe className="h-8 w-8 text-primary-foreground" />
-            </div>
-            <h3 className="text-2xl font-bold text-foreground">3</h3>
-            <p className="text-muted-foreground">Languages Spoken</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-              <User className="h-8 w-8 text-accent-foreground" />
-            </div>
-            <h3 className="text-2xl font-bold text-foreground">Top</h3>
-            <p className="text-muted-foreground">Performer</p>
-          </div>
-        </div>
       </div>
     </section>
   );
