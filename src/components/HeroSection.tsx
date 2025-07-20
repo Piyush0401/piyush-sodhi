@@ -91,7 +91,7 @@ const HeroSection = () => {
               
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 bg-primary-foreground rounded-lg px-4 py-2 shadow-card">
-                <div className="text-sm font-semibold text-foreground">3rd Year Student</div>
+                <div className="text-sm font-semibold text-foreground">4th Year Student</div>
                 <div className="text-xs text-muted-foreground">ISE, AIT</div>
               </div>
               
