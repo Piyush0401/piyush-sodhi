@@ -192,12 +192,6 @@ const ProjectsSection = () => {
                   <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground">
                     {project.icon}
                   </div>
-                  <Badge 
-                    variant={project.status === "Completed" ? "default" : "secondary"}
-                    className={project.status === "Completed" ? "bg-green-500 text-white" : ""}
-                  >
-                    {project.status}
-                  </Badge>
                 </div>
                 
                 <CardTitle className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">

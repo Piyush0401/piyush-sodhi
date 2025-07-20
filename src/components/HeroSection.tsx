@@ -72,21 +72,6 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="flex flex-wrap gap-8 justify-center lg:justify-start pt-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent">8+</div>
-                <div className="text-sm text-primary-foreground/60">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent">7+</div>
-                <div className="text-sm text-primary-foreground/60">Certifications</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent">15+</div>
-                <div className="text-sm text-primary-foreground/60">Projects</div>
-              </div>
-            </div>
           </div>
 
           {/* Right Content - Profile Image */}
@@ -96,9 +81,11 @@ const HeroSection = () => {
               <div className="relative w-80 h-80 lg:w-96 lg:h-96">
                 <div className="absolute inset-0 bg-accent rounded-full shadow-glow"></div>
                 <div className="absolute inset-4 bg-primary-foreground rounded-full overflow-hidden shadow-elegant">
-                  <div className="w-full h-full bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
-                    <Eye className="w-16 h-16 text-muted-foreground" />
-                  </div>
+                  <img 
+                    src="/lovable-uploads/8c7f23e1-3e4e-48d4-824b-6f1bc7b7119c.png" 
+                    alt="Piyush Kumar Sodhi" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               
@@ -108,17 +95,6 @@ const HeroSection = () => {
                 <div className="text-xs text-muted-foreground">ISE, AIT</div>
               </div>
               
-              {/* Customer rating style badge */}
-              <div className="absolute -bottom-4 -left-4 bg-primary-foreground rounded-lg px-4 py-2 shadow-card">
-                <div className="flex items-center space-x-2">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <div key={i} className="w-3 h-3 bg-accent rounded-full"></div>
-                    ))}
-                  </div>
-                  <span className="text-sm font-medium text-foreground">Top Performer</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

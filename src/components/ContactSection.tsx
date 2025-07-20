@@ -237,26 +237,31 @@ const ContactSection = () => {
           </Card>
         </div>
 
-        {/* Download CV Section */}
-        <div className="mt-16 text-center">
-          <Card className="shadow-card border-border/50 bg-secondary/30">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Interested in My Work?
-              </h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Download my CV to get a comprehensive overview of my experience, skills, and achievements.
+        {/* Footer */}
+        <footer className="mt-20 pt-12 border-t border-border/50">
+          <div className="text-center space-y-6">
+            <div className="flex justify-center space-x-6">
+              {contactInfo.slice(2, 4).map((info, index) => (
+                <a 
+                  key={index}
+                  href={info.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-secondary/30 rounded-full border border-border/50 hover:bg-primary hover:text-primary-foreground transition-all duration-200 group"
+                >
+                  {info.icon}
+                </a>
+              ))}
+            </div>
+            <div className="space-y-2">
+              <p className="text-lg font-semibold text-foreground">Piyush Kumar Sodhi</p>
+              <p className="text-muted-foreground">Aspiring Full Stack Developer & Data Analyst</p>
+              <p className="text-sm text-muted-foreground">
+                © 2025 Piyush Kumar Sodhi. All rights reserved.
               </p>
-              <Button 
-                size="lg"
-                className="bg-gradient-secondary hover:opacity-90 transition-opacity shadow-elegant"
-              >
-                <ExternalLink className="w-5 h-5 mr-2" />
-                Download CV
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </section>
   );
