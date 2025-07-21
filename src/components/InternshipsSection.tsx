@@ -52,14 +52,19 @@ const InternshipsSection = () => {
   ];
 
   return (
-    <section id="internships" className="py-20 bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="internships" className="py-20 bg-gradient-accent relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
+      <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-primary rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-secondary rounded-full opacity-10 blur-3xl"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
             Professional Experience
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             My journey through internships and practical experience in cutting-edge technologies
           </p>
         </div>
@@ -67,9 +72,9 @@ const InternshipsSection = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-primary"></div>
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-primary rounded-full shadow-glow"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-16">
             {internships.map((internship, index) => (
               <div 
                 key={index} 
@@ -78,54 +83,57 @@ const InternshipsSection = () => {
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-elegant z-10"></div>
+                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-gradient-primary rounded-full border-4 border-background shadow-glow z-10 animate-pulse"></div>
 
                 {/* Content card */}
-                <div className={`w-full md:w-5/12 ml-12 md:ml-0 ${
+                <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${
                   index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
                 }`}>
-                  <Card className="shadow-card border-border/50 hover:shadow-elegant transition-shadow duration-300">
-                    <CardHeader className="pb-3">
-                      <div className="flex items-start justify-between mb-2">
+                  <Card className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
+                    <CardHeader className="pb-4">
+                      <div className="flex items-start justify-between mb-3">
                         <Badge 
-                          variant="secondary" 
-                          className="bg-primary/10 text-primary border-primary/20"
+                          variant="outline" 
+                          className="bg-primary/10 text-primary border-primary/30 px-3 py-1"
                         >
                           {internship.type}
                         </Badge>
-                        <div className="flex items-center text-sm text-muted-foreground">
+                        <div className="flex items-center text-sm text-muted-foreground bg-secondary/30 px-3 py-1 rounded-full">
                           <Calendar className="w-4 h-4 mr-1" />
                           {internship.period}
                         </div>
                       </div>
                       
-                      <CardTitle className="text-lg font-bold text-foreground">
+                      <CardTitle className="text-xl font-bold text-foreground mb-3">
                         {internship.title}
                       </CardTitle>
                       
-                      <div className="flex items-center text-muted-foreground text-sm">
-                        <Briefcase className="w-4 h-4 mr-2" />
-                        <span className="font-medium">{internship.company}</span>
-                        <span className="mx-2">•</span>
-                        <MapPin className="w-4 h-4 mr-1" />
-                        <span>{internship.location}</span>
+                      <div className="flex items-center text-muted-foreground">
+                        <div className="flex items-center mr-4">
+                          <Briefcase className="w-4 h-4 mr-2" />
+                          <span className="font-medium">{internship.company}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-1" />
+                          <span>{internship.location}</span>
+                        </div>
                       </div>
                     </CardHeader>
                     
-                    <CardContent className="space-y-4">
-                      <p className="text-muted-foreground">
+                    <CardContent className="space-y-6">
+                      <p className="text-muted-foreground leading-relaxed">
                         {internship.description}
                       </p>
                       
                       {/* Technologies */}
                       <div>
-                        <h4 className="font-semibold text-foreground mb-2 text-sm">Technologies Used:</h4>
+                        <h4 className="font-semibold text-foreground mb-3">Technologies Used:</h4>
                         <div className="flex flex-wrap gap-2">
                           {internship.technologies.map((tech) => (
                             <Badge 
                               key={tech}
                               variant="outline" 
-                              className="text-xs bg-secondary/50 border-border/50"
+                              className="bg-secondary/50 border-primary/20 hover:bg-primary/10 transition-colors duration-200"
                             >
                               {tech}
                             </Badge>
@@ -135,12 +143,12 @@ const InternshipsSection = () => {
                       
                       {/* Key Achievements */}
                       <div>
-                        <h4 className="font-semibold text-foreground mb-2 text-sm">Key Achievements:</h4>
-                        <ul className="space-y-1">
+                        <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
+                        <ul className="space-y-2">
                           {internship.achievements.map((achievement, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                              <ArrowRight className="w-3 h-3 mt-0.5 text-primary flex-shrink-0" />
-                              <span>{achievement}</span>
+                            <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                              <div className="w-2 h-2 bg-gradient-primary rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="leading-relaxed">{achievement}</span>
                             </li>
                           ))}
                         </ul>

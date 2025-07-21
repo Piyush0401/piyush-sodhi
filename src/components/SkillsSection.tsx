@@ -76,14 +76,19 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-20 bg-background relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-tl from-accent/5 via-transparent to-primary/5"></div>
+      <div className="absolute top-32 right-32 w-80 h-80 bg-gradient-primary rounded-full opacity-8 blur-3xl"></div>
+      <div className="absolute bottom-32 left-32 w-72 h-72 bg-gradient-secondary rounded-full opacity-8 blur-3xl"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
             Technical Skills
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             A comprehensive overview of my technical expertise and proficiency levels
           </p>
         </div>
@@ -91,29 +96,29 @@ const SkillsSection = () => {
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="shadow-card border-border/50 hover:shadow-elegant transition-shadow duration-300">
+            <Card key={index} className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
               <CardHeader className="pb-4">
-                <CardTitle className="flex items-center gap-3 text-foreground">
-                  <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground">
+                <CardTitle className="flex items-center gap-3 text-foreground text-lg">
+                  <div className="p-3 bg-gradient-primary rounded-xl text-primary-foreground shadow-glow group-hover:scale-110 transition-transform duration-300">
                     {category.icon}
                   </div>
                   {category.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-5">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
+                  <div key={skillIndex} className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-foreground">
+                      <span className="font-medium text-foreground">
                         {skill.name}
                       </span>
-                      <span className="text-xs text-muted-foreground">
+                      <span className="text-sm text-muted-foreground font-medium">
                         {skill.level}%
                       </span>
                     </div>
                     <Progress 
                       value={skill.level} 
-                      className="h-2"
+                      className="h-2.5 bg-secondary/50"
                     />
                   </div>
                 ))}
@@ -123,26 +128,26 @@ const SkillsSection = () => {
         </div>
 
         {/* Other Domains */}
-        <div className="text-center mb-8">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold gradient-text mb-4">
             Additional Expertise
           </h3>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Other domains and technologies I'm familiar with
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
           {otherDomains.map((domain, index) => (
             <Card 
               key={index} 
-              className="p-4 text-center shadow-card border-border/50 hover:shadow-elegant hover:scale-105 transition-all duration-300 cursor-default"
+              className="p-6 text-center shadow-card border-border/50 hover:shadow-glow hover-lift transition-all duration-300 bg-gradient-card backdrop-blur-sm group"
             >
-              <div className="flex flex-col items-center space-y-2">
-                <div className="p-2 bg-gradient-secondary rounded-lg text-accent-foreground">
+              <div className="flex flex-col items-center space-y-3">
+                <div className="p-3 bg-gradient-secondary rounded-xl text-accent-foreground group-hover:scale-110 transition-transform duration-300 shadow-elegant">
                   {domain.icon}
                 </div>
-                <span className="text-xs font-medium text-foreground text-center leading-tight">
+                <span className="text-sm font-medium text-foreground text-center leading-tight">
                   {domain.name}
                 </span>
               </div>
@@ -151,23 +156,18 @@ const SkillsSection = () => {
         </div>
 
         {/* Skills Summary Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-primary mb-2">15+</div>
-            <div className="text-muted-foreground">Technologies</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-primary mb-2">4+</div>
-            <div className="text-muted-foreground">Programming Languages</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-primary mb-2">8+</div>
-            <div className="text-muted-foreground">Frameworks</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-primary mb-2">6+</div>
-            <div className="text-muted-foreground">Domains</div>
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { number: "15+", label: "Technologies" },
+            { number: "4+", label: "Programming Languages" },
+            { number: "8+", label: "Frameworks" },
+            { number: "6+", label: "Domains" }
+          ].map((stat, index) => (
+            <Card key={index} className="p-6 shadow-card border-border/50 hover:shadow-hover transition-all duration-300 bg-gradient-card hover-lift">
+              <div className="text-4xl font-bold gradient-text mb-3">{stat.number}</div>
+              <div className="text-muted-foreground font-medium">{stat.label}</div>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

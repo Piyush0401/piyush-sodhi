@@ -115,14 +115,19 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-background relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-accent/5"></div>
+      <div className="absolute top-20 left-20 w-80 h-80 bg-gradient-secondary rounded-full opacity-8 blur-3xl"></div>
+      <div className="absolute bottom-20 right-20 w-72 h-72 bg-gradient-primary rounded-full opacity-8 blur-3xl"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
             Get In Touch
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to collaborate or discuss opportunities? I'd love to hear from you.
           </p>
         </div>
@@ -130,15 +135,17 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <Card className="shadow-card border-border/50">
+            <Card className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
               <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-foreground">
-                  <MapPin className="w-6 h-6 text-primary" />
+                <CardTitle className="flex items-center gap-3 text-foreground text-xl">
+                  <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground">
+                    <MapPin className="w-6 h-6" />
+                  </div>
                   Contact Information
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground leading-relaxed text-lg">
                   I'm always open to discussing new opportunities, collaborations, 
                   or answering any questions you might have. Feel free to reach out 
                   through any of the following channels.
@@ -151,18 +158,18 @@ const ContactSection = () => {
                       href={info.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-4 p-3 rounded-lg bg-secondary/30 border border-border/50 hover:bg-secondary/50 hover:shadow-card transition-all duration-200 group"
+                      className="flex items-center gap-4 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:bg-secondary/50 hover:border-primary/30 hover:shadow-card transition-all duration-300 group"
                     >
-                      <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground group-hover:scale-110 transition-transform">
+                      <div className="p-3 bg-gradient-primary rounded-xl text-primary-foreground group-hover:scale-110 transition-transform duration-300 shadow-glow">
                         {info.icon}
                       </div>
                       <div>
-                        <div className="font-medium text-foreground">{info.label}</div>
-                        <div className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
+                        <div className="font-medium text-foreground text-lg">{info.label}</div>
+                        <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300">
                           {info.value}
                         </div>
                       </div>
-                      <ExternalLink className="w-4 h-4 text-muted-foreground ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <ExternalLink className="w-5 h-5 text-muted-foreground ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </a>
                   ))}
                 </div>
@@ -170,34 +177,36 @@ const ContactSection = () => {
             </Card>
 
             {/* Additional Info */}
-            <Card className="shadow-card border-border/50 bg-gradient-primary text-primary-foreground">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3">Let's Build Something Amazing</h3>
-                <p className="text-primary-foreground/80 mb-4">
+            <Card className="shadow-card border-border/50 bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-500 hover-lift">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-4">Let's Build Something Amazing</h3>
+                <p className="text-primary-foreground/90 mb-6 leading-relaxed text-lg">
                   Whether you're looking for a dedicated developer, a research collaborator, 
                   or someone passionate about innovative technology solutions, I'm here to help 
                   bring your ideas to life.
                 </p>
-                <div className="flex items-center gap-2 text-sm">
-                  <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-                  <span>Available for internships and projects</span>
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-accent rounded-full animate-pulse shadow-glow"></div>
+                  <span className="font-medium">Available for internships and projects</span>
                 </div>
               </CardContent>
             </Card>
           </div>
 
           {/* Contact Form */}
-          <Card className="shadow-card border-border/50">
+          <Card className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
             <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-foreground">
-                <MessageSquare className="w-6 h-6 text-primary" />
+              <CardTitle className="flex items-center gap-3 text-foreground text-xl">
+                <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground">
+                  <MessageSquare className="w-6 h-6" />
+                </div>
                 Send Me a Message
               </CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="flex items-center gap-2">
+                <div className="space-y-3">
+                  <Label htmlFor="name" className="flex items-center gap-2 text-foreground font-medium">
                     <User className="w-4 h-4" />
                     Full Name
                   </Label>
@@ -208,12 +217,12 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Enter your full name"
-                    className="border-border/50 focus:border-primary"
+                    className="border-border/50 focus:border-primary transition-colors duration-300 bg-background/50"
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="flex items-center gap-2">
+                <div className="space-y-3">
+                  <Label htmlFor="email" className="flex items-center gap-2 text-foreground font-medium">
                     <Mail className="w-4 h-4" />
                     Email Address
                   </Label>
@@ -224,12 +233,12 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="Enter your email address"
-                    className="border-border/50 focus:border-primary"
+                    className="border-border/50 focus:border-primary transition-colors duration-300 bg-background/50"
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="flex items-center gap-2">
+                <div className="space-y-3">
+                  <Label htmlFor="message" className="flex items-center gap-2 text-foreground font-medium">
                     <MessageSquare className="w-4 h-4" />
                     Message
                   </Label>
@@ -240,14 +249,14 @@ const ContactSection = () => {
                     onChange={handleInputChange}
                     placeholder="Tell me about your project or inquiry..."
                     rows={6}
-                    className="border-border/50 focus:border-primary resize-none"
+                    className="border-border/50 focus:border-primary resize-none transition-colors duration-300 bg-background/50"
                   />
                 </div>
 
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-primary hover:opacity-90 transition-opacity shadow-elegant disabled:opacity-50"
+                  className="w-full bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-elegant hover:shadow-glow disabled:opacity-50"
                   size="lg"
                 >
                   <Send className="w-5 h-5 mr-2" />
@@ -258,9 +267,11 @@ const ContactSection = () => {
           </Card>
         </div>
 
-        {/* Footer */}
-        <footer className="mt-20 pt-12 border-t border-border/50">
-          <div className="text-center space-y-6">
+        {/* Enhanced Footer */}
+        <footer className="mt-24 pt-16 border-t border-gradient-primary/20 relative">
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-primary"></div>
+          
+          <div className="text-center space-y-8">
             <div className="flex justify-center space-x-6">
               {contactInfo.slice(2, 4).map((info, index) => (
                 <a 
@@ -268,15 +279,23 @@ const ContactSection = () => {
                   href={info.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-secondary/30 rounded-full border border-border/50 hover:bg-primary hover:text-primary-foreground transition-all duration-200 group"
+                  className="p-4 bg-gradient-card rounded-full border border-border/50 hover:bg-gradient-primary hover:text-primary-foreground hover:shadow-glow transition-all duration-300 group hover-lift"
                 >
-                  {info.icon}
+                  <div className="group-hover:scale-110 transition-transform duration-300">
+                    {info.icon}
+                  </div>
                 </a>
               ))}
             </div>
-            <div className="space-y-2">
-              <p className="text-lg font-semibold text-foreground">Piyush Kumar Sodhi</p>
-              <p className="text-muted-foreground">Aspiring Full Stack Developer & Data Analyst</p>
+            
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold gradient-text">Piyush Kumar Sodhi</h3>
+              <p className="text-lg text-muted-foreground">Aspiring Full Stack Developer & Data Analyst</p>
+              <div className="flex items-center justify-center gap-2 text-muted-foreground">
+                <div className="w-1 h-1 bg-primary rounded-full"></div>
+                <span>Building the future, one line of code at a time</span>
+                <div className="w-1 h-1 bg-primary rounded-full"></div>
+              </div>
               <p className="text-sm text-muted-foreground">
                 © 2025 Piyush Kumar Sodhi. All rights reserved.
               </p>
