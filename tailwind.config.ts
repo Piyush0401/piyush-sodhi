@@ -67,14 +67,18 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-accent': 'var(--gradient-accent)',
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
 				'card': 'var(--shadow-card)',
 				'glow': 'var(--shadow-glow)',
+				'hover': 'var(--shadow-hover)',
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',
+				'spring': 'var(--transition-spring)',
 			},
 			fontFamily: {
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
