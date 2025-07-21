@@ -53,9 +53,9 @@ const Navigation = () => {
             <Button 
               variant="default" 
               className="bg-gradient-primary hover:opacity-90 transition-opacity"
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => window.open("https://drive.google.com/file/d/1siwlClBjPt45R8lquhO22dJApApCD8k6/view", "_blank")}
             >
-              Download CV
+              Check CV
             </Button>
           </div>
 
@@ -88,9 +88,9 @@ const Navigation = () => {
               <div className="pt-2">
                 <Button 
                   className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
-                  onClick={() => scrollToSection("#contact")}
+                  onClick={() => window.open("https://drive.google.com/file/d/1siwlClBjPt45R8lquhO22dJApApCD8k6/view", "_blank")}
                 >
-                  Download CV
+                  Check CV
                 </Button>
               </div>
             </div>
