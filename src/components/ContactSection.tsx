@@ -268,37 +268,81 @@ const ContactSection = () => {
         </div>
 
         {/* Enhanced Footer */}
-        <footer className="mt-24 pt-16 border-t border-gradient-primary/20 relative">
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-primary"></div>
-          
-          <div className="text-center space-y-8">
-            <div className="flex justify-center space-x-6">
-              {contactInfo.slice(2, 4).map((info, index) => (
-                <a 
-                  key={index}
-                  href={info.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-4 bg-gradient-card rounded-full border border-border/50 hover:bg-gradient-primary hover:text-primary-foreground hover:shadow-glow transition-all duration-300 group hover-lift"
-                >
-                  <div className="group-hover:scale-110 transition-transform duration-300">
-                    {info.icon}
-                  </div>
-                </a>
-              ))}
+        <footer className="mt-32 relative">
+          {/* Decorative separator */}
+          <div className="relative mb-16">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gradient-to-r from-transparent via-border to-transparent"></div>
             </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold gradient-text">Piyush Kumar Sodhi</h3>
-              <p className="text-lg text-muted-foreground">Aspiring Full Stack Developer & Data Analyst</p>
-              <div className="flex items-center justify-center gap-2 text-muted-foreground">
-                <div className="w-1 h-1 bg-primary rounded-full"></div>
-                <span>Building the future, one line of code at a time</span>
-                <div className="w-1 h-1 bg-primary rounded-full"></div>
+            <div className="relative flex justify-center">
+              <div className="bg-background px-6">
+                <div className="w-16 h-px bg-gradient-primary"></div>
               </div>
-              <p className="text-sm text-muted-foreground">
-                © 2025 Piyush Kumar Sodhi. All rights reserved.
-              </p>
+            </div>
+          </div>
+
+          {/* Footer content */}
+          <div className="bg-gradient-card border border-border/30 rounded-3xl p-12 backdrop-blur-sm shadow-card hover:shadow-hover transition-all duration-500 relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-50"></div>
+            <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-primary rounded-full opacity-10 blur-2xl"></div>
+            <div className="absolute -bottom-20 -left-20 w-32 h-32 bg-gradient-secondary rounded-full opacity-10 blur-2xl"></div>
+            
+            <div className="relative z-10 text-center space-y-8">
+              {/* Social Links */}
+              <div className="flex justify-center space-x-6">
+                {contactInfo.slice(2, 4).map((info, index) => (
+                  <a 
+                    key={index}
+                    href={info.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative"
+                  >
+                    <div className="p-4 bg-gradient-secondary rounded-2xl border border-border/50 hover:bg-gradient-primary hover:text-primary-foreground hover:shadow-glow transition-all duration-300 hover-lift">
+                      <div className="group-hover:scale-110 transition-transform duration-300">
+                        {info.icon}
+                      </div>
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </a>
+                ))}
+              </div>
+              
+              {/* Brand section */}
+              <div className="space-y-6">
+                <div className="space-y-3">
+                  <h3 className="text-3xl md:text-4xl font-bold gradient-text">Piyush Kumar Sodhi</h3>
+                  <p className="text-xl text-muted-foreground font-medium">Full Stack Developer & Data Analyst</p>
+                </div>
+                
+                {/* Tagline with decorative elements */}
+                <div className="flex items-center justify-center gap-4 text-muted-foreground">
+                  <div className="w-8 h-px bg-gradient-primary"></div>
+                  <span className="text-lg font-medium italic">Building the future, one line of code at a time</span>
+                  <div className="w-8 h-px bg-gradient-primary"></div>
+                </div>
+                
+                {/* Additional info */}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                    <span>Available for opportunities</span>
+                  </div>
+                  <div className="hidden md:block w-1 h-1 bg-border rounded-full"></div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    <span>Bangalore, India</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Copyright */}
+              <div className="pt-6 border-t border-border/30">
+                <p className="text-sm text-muted-foreground">
+                  © {new Date().getFullYear()} Piyush Kumar Sodhi. Crafted with passion and precision.
+                </p>
+              </div>
             </div>
           </div>
         </footer>
