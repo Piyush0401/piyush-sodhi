@@ -158,14 +158,17 @@ const SkillsSection = () => {
         {/* Skills Summary Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { number: "15+", label: "Technologies" },
-            { number: "4+", label: "Programming Languages" },
-            { number: "8+", label: "Frameworks" },
-            { number: "6+", label: "Domains" }
+            { number: "7+", label: "Technologies" },
+            { number: "6", label: "Programming Languages" },
+            { number: "14", label: "Frameworks/Tools/Libraries" },
+            { number: "10", label: "Domains" }
           ].map((stat, index) => (
-            <Card key={index} className="p-6 shadow-card border-border/50 hover:shadow-hover transition-all duration-300 bg-gradient-card hover-lift">
-              <div className="text-4xl font-bold gradient-text mb-3">{stat.number}</div>
-              <div className="text-muted-foreground font-medium">{stat.label}</div>
+            <Card key={index} className="group p-8 shadow-card border-border/50 hover:shadow-glow transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift overflow-hidden relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10">
+                <div className="text-5xl md:text-6xl font-bold gradient-text mb-4 group-hover:scale-110 transition-transform duration-300">{stat.number}</div>
+                <div className="text-muted-foreground font-medium text-lg leading-tight">{stat.label}</div>
+              </div>
             </Card>
           ))}
         </div>
