@@ -96,29 +96,30 @@ const SkillsSection = () => {
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
-              <CardHeader className="pb-4">
-                <CardTitle className="flex items-center gap-3 text-foreground text-lg">
+            <Card key={index} className="group shadow-card border-border/50 hover:shadow-glow transition-all duration-500 overflow-hidden bg-gradient-card backdrop-blur-sm hover-lift relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardHeader className="pb-4 relative z-10">
+                <CardTitle className="flex items-center gap-4 text-foreground text-xl">
                   <div className="p-3 bg-gradient-primary rounded-xl text-primary-foreground shadow-glow group-hover:scale-110 transition-transform duration-300">
                     {category.icon}
                   </div>
-                  {category.title}
+                  <span className="group-hover:text-primary transition-colors duration-300">{category.title}</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-5">
+              <CardContent className="space-y-6 relative z-10">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-foreground">
+                      <span className="font-medium text-foreground group-hover:text-primary/90 transition-colors duration-300">
                         {skill.name}
                       </span>
-                      <span className="text-sm text-muted-foreground font-medium">
+                      <span className="text-sm text-muted-foreground font-medium bg-secondary/30 px-2 py-1 rounded-md">
                         {skill.level}%
                       </span>
                     </div>
                     <Progress 
                       value={skill.level} 
-                      className="h-2.5 bg-secondary/50"
+                      className="h-3 bg-secondary/30 border border-border/30"
                     />
                   </div>
                 ))}
