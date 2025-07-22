@@ -4,13 +4,41 @@ import { Badge } from "@/components/ui/badge";
 
 const AboutSection = () => {
   const certifications = [
-    "AWS Solutions Architecture Job Simulation",
-    "Power BI Simulation – PwC Switzerland",
-    "Cybersecurity Essentials – IBM",
-    "Blockchain Basics – SUNY Buffalo",
-    "Digital Marketing – Google",
-    "AI for Everyone – DeepLearning.AI",
-    "Java Fundamentals – Infosys"
+    {
+      name: "AWS Solutions Architecture Job Simulation",
+      date: "Feb 2025",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_fy3C8Pc6p9MkHfXJ4_1738852686320_completion_certificate.pdf"
+    },
+    {
+      name: "Power BI Simulation – PwC Switzerland",
+      date: "Feb 2025",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/4sLyCPgmsy8DA6Dh3/a87GpgE6tiku7q3gu_4sLyCPgmsy8DA6Dh3_fy3C8Pc6p9MkHfXJ4_1739470319824_completion_certificate.pdf"
+    },
+    {
+      name: "Cybersecurity Essentials – IBM",
+      date: "May 2024",
+      link: "https://drive.google.com/file/d/1E-WRTt8XwPPyVODDx1jiMD6oPsPGEG93/view?usp=drive_link"
+    },
+    {
+      name: "Blockchain Basics – SUNY Buffalo",
+      date: "Oct 2024",
+      link: "https://www.coursera.org/account/accomplishments/records/DIZOMWJVIEHS"
+    },
+    {
+      name: "Digital Marketing – Google",
+      date: "Oct 2022",
+      link: "https://drive.google.com/file/d/1IXhA-Le04696vr5-1koNENBTO_idhbCK/view?usp=sharing"
+    },
+    {
+      name: "AI for Everyone – DeepLearning.AI",
+      date: "Feb 2024",
+      link: "https://drive.google.com/file/d/1-F0CXIc0K4BmPoiRl1lVmocC56JzSeDb/view?usp=sharing"
+    },
+    {
+      name: "Java Fundamentals – Infosys",
+      date: "Aug 2023",
+      link: "https://drive.google.com/file/d/1mbO3w0M2E0wiEiJtHVppy6AfSKPEDQLS/view?usp=sharing"
+    }
   ];
 
   const languages = ["English", "Hindi", "Kannada"];
@@ -113,18 +141,21 @@ const AboutSection = () => {
               <CardContent>
                 <div className="grid gap-4">
                   {certifications.map((cert, index) => (
-                    <div 
+                    <a 
                       key={index}
-                      className="flex items-start gap-3 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:bg-secondary/50 hover:border-primary/30 transition-all duration-300 group"
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-3 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:bg-secondary/50 hover:border-primary/30 transition-all duration-300 group cursor-pointer"
                     >
                       <div className="w-2 h-2 bg-gradient-primary rounded-full mt-3 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
                       <div>
-                        <p className="font-medium text-foreground leading-relaxed">{cert}</p>
+                        <p className="font-medium text-foreground leading-relaxed group-hover:text-primary transition-colors duration-200">{cert.name}</p>
                         <p className="text-sm text-muted-foreground mt-1">
-                          {index < 2 ? "Feb 2025" : index < 4 ? "2024" : "2023-2024"}
+                          {cert.date}
                         </p>
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </CardContent>
