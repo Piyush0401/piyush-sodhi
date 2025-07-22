@@ -35,18 +35,25 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-5rem)]">
           {/* Left Content */}
           <div className="text-center lg:text-left space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
-                Hello, I'm{" "}
-                <span className="block text-accent">Piyush Kumar Sodhi</span>
-                <span className="block text-lg md:text-xl font-medium text-primary-foreground/80 mt-2">
-                  Aspiring Full Stack Developer & Data Analyst
-                </span>
+            <div className="space-y-6">
+              <p className="text-xl text-primary-foreground/90">
+                Hey, I'm Piyush
+              </p>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
+                <span className="block">Aspiring</span>
+                <span className="block">Full Stack</span>
+                <span className="block">Developer &</span>
+                <span className="block">Data Analyst</span>
               </h1>
               
               <p className="text-lg text-primary-foreground/80 max-w-2xl">
-                Passionate Information Science student with hands-on experience in software development, 
-                data analysis, and cutting-edge technologies. Building innovative solutions for complex challenges.
+                I'm a frontend developer based in India. I'll help you build 
+                beautiful websites your users will love.
+              </p>
+              
+              <p className="text-base text-primary-foreground/70">
+                4th Year Student ISE, AIT
               </p>
             </div>
 
@@ -54,21 +61,19 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-elegant"
-                onClick={() => scrollToSection("#projects")}
+                className="bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground border border-primary-foreground/30 shadow-elegant"
+                onClick={() => scrollToSection("#contact")}
               >
-                View Projects
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Get In Touch
               </Button>
               
               <Button 
                 size="lg"
                 variant="outline"
-                className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20"
-                onClick={() => scrollToSection("#about")}
+                className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20"
+                onClick={() => scrollToSection("#projects")}
               >
-                <Play className="mr-2 h-5 w-5" />
-                Learn More
+                Browse Projects
               </Button>
             </div>
 
