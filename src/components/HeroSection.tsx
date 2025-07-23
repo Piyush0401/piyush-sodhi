@@ -34,7 +34,7 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-5rem)]">
           {/* Left Content */}
-          <div className="text-center lg:text-left space-y-6">
+          <div className="text-center lg:text-left space-y-8">
             <div className="space-y-6">
               <p className="text-xl text-primary-foreground/90">
                 Hey, I'm Piyush
@@ -80,7 +80,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg"
                 className="bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground border border-primary-foreground/30 shadow-elegant"
