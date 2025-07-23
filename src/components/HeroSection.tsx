@@ -1,4 +1,4 @@
-import { ArrowRight, Play, Eye } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -48,13 +48,35 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-lg text-primary-foreground/80 max-w-2xl">
-                I'm a frontend developer based in India. I'll help you build 
-                beautiful websites your users will love.
+                Passionate Information Science student with hands-on experience in software development, 
+                data analysis, and cutting-edge technologies. Building innovative solutions for complex challenges.
               </p>
               
-              <p className="text-base text-primary-foreground/70">
-                4th Year Student ISE, AIT
-              </p>
+              {/* Social Links */}
+              <div className="flex gap-4 justify-center lg:justify-start">
+                <a 
+                  href="https://github.com/piyushsodhi04" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full border border-primary-foreground/20 transition-all duration-300 hover:scale-110"
+                >
+                  <Github className="w-5 h-5 text-primary-foreground" />
+                </a>
+                <a 
+                  href="https://linkedin.com/in/piyushsodhi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full border border-primary-foreground/20 transition-all duration-300 hover:scale-110"
+                >
+                  <Linkedin className="w-5 h-5 text-primary-foreground" />
+                </a>
+                <a 
+                  href="mailto:piyushsodhi04@gmail.com"
+                  className="p-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full border border-primary-foreground/20 transition-all duration-300 hover:scale-110"
+                >
+                  <Mail className="w-5 h-5 text-primary-foreground" />
+                </a>
+              </div>
             </div>
 
             {/* CTA Buttons */}
@@ -84,7 +106,7 @@ const HeroSection = () => {
             <div className="relative">
               {/* Profile image container */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                <div className="absolute inset-0 bg-accent rounded-full shadow-glow"></div>
+                <div className="absolute inset-0 bg-primary/60 rounded-full shadow-glow"></div>
                 <div className="absolute inset-4 bg-primary-foreground rounded-full overflow-hidden shadow-elegant">
                   <img 
                     src="/lovable-uploads/8c7f23e1-3e4e-48d4-824b-6f1bc7b7119c.png" 
