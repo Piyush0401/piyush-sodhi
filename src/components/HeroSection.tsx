@@ -13,21 +13,21 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen relative overflow-hidden bg-gradient-hero">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-accent/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-primary/20 rounded-full blur-lg animate-pulse delay-300"></div>
-        <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-pulse delay-700"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/20 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-primary/30 rounded-full blur-lg animate-float delay-300"></div>
+        <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-primary/15 rounded-full blur-2xl animate-float delay-700"></div>
         
         {/* Decorative dots */}
-        <div className="absolute top-32 left-1/3 flex flex-col space-y-2">
-          <div className="w-2 h-2 bg-accent rounded-full"></div>
-          <div className="w-2 h-2 bg-accent/60 rounded-full"></div>
-          <div className="w-2 h-2 bg-accent/30 rounded-full"></div>
+        <div className="absolute top-32 left-1/3 flex flex-col space-y-2 animate-bounce-slow">
+          <div className="w-2 h-2 bg-primary/60 rounded-full animate-pulse"></div>
+          <div className="w-2 h-2 bg-primary/80 rounded-full animate-pulse delay-150"></div>
+          <div className="w-2 h-2 bg-primary rounded-full animate-pulse delay-300"></div>
         </div>
         
-        <div className="absolute bottom-32 right-1/4 flex flex-col space-y-2">
-          <div className="w-2 h-2 bg-primary-foreground/40 rounded-full"></div>
-          <div className="w-2 h-2 bg-primary-foreground/60 rounded-full"></div>
-          <div className="w-2 h-2 bg-primary-foreground/80 rounded-full"></div>
+        <div className="absolute bottom-32 right-1/4 flex flex-col space-y-2 animate-bounce-slow delay-500">
+          <div className="w-2 h-2 bg-primary-foreground/60 rounded-full animate-pulse"></div>
+          <div className="w-2 h-2 bg-primary-foreground/80 rounded-full animate-pulse delay-200"></div>
+          <div className="w-2 h-2 bg-primary-foreground rounded-full animate-pulse delay-400"></div>
         </div>
       </div>
 
@@ -55,26 +55,26 @@ const HeroSection = () => {
               {/* Social Links */}
               <div className="flex gap-4 justify-center lg:justify-start">
                 <a 
-                  href="https://github.com/piyushsodhi04" 
+                  href="https://github.com/piyush1457" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full border border-primary-foreground/20 transition-all duration-300 hover:scale-110"
+                  className="p-4 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full border border-primary-foreground/20 transition-all duration-300 hover:scale-110 shadow-elegant"
                 >
-                  <Github className="w-5 h-5 text-primary-foreground" />
+                  <Github className="w-6 h-6 text-primary-foreground" />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/piyushsodhi" 
+                  href="https://www.linkedin.com/in/piyush-kumar-sodhi-104b6b307/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full border border-primary-foreground/20 transition-all duration-300 hover:scale-110"
+                  className="p-4 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full border border-primary-foreground/20 transition-all duration-300 hover:scale-110 shadow-elegant"
                 >
-                  <Linkedin className="w-5 h-5 text-primary-foreground" />
+                  <Linkedin className="w-6 h-6 text-primary-foreground" />
                 </a>
                 <a 
-                  href="mailto:piyushsodhi04@gmail.com"
-                  className="p-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full border border-primary-foreground/20 transition-all duration-300 hover:scale-110"
+                  href="mailto:piyushsodhi145@gmail.com"
+                  className="p-4 bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full border border-primary-foreground/20 transition-all duration-300 hover:scale-110 shadow-elegant"
                 >
-                  <Mail className="w-5 h-5 text-primary-foreground" />
+                  <Mail className="w-6 h-6 text-primary-foreground" />
                 </a>
               </div>
             </div>
@@ -105,13 +105,13 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               {/* Profile image container */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                <div className="absolute inset-0 bg-primary/60 rounded-full shadow-glow"></div>
-                <div className="absolute inset-4 bg-primary-foreground rounded-full overflow-hidden shadow-elegant">
+              <div className="relative w-96 h-96 lg:w-[28rem] lg:h-[28rem]">
+                <div className="absolute inset-0 bg-primary/60 rounded-full shadow-glow animate-pulse"></div>
+                <div className="absolute inset-4 bg-primary-foreground rounded-full overflow-hidden shadow-elegant ring-4 ring-primary/30">
                   <img 
                     src="/lovable-uploads/8c7f23e1-3e4e-48d4-824b-6f1bc7b7119c.png" 
                     alt="Piyush Kumar Sodhi" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>

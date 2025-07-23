@@ -123,10 +123,32 @@ All colors MUST be HSL.
   }
   
   .hover-lift {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-hover;
+    @apply transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:scale-[1.02];
   }
   
   .gradient-text {
     @apply bg-gradient-primary bg-clip-text text-transparent;
   }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 3s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 20px hsl(var(--primary) / 0.4); }
+  to { box-shadow: 0 0 30px hsl(var(--primary) / 0.6), 0 0 40px hsl(var(--primary) / 0.4); }
 }

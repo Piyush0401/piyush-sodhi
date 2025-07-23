@@ -23,12 +23,12 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/50 shadow-elegant">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer">
               Piyush
             </span>
           </div>
@@ -40,9 +40,10 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+                  className="text-muted-foreground hover:text-foreground transition-all duration-300 font-medium relative group hover:scale-105"
                 >
                   {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </button>
               ))}
             </div>
@@ -52,7 +53,7 @@ const Navigation = () => {
           <div className="hidden md:block">
             <Button 
               variant="default" 
-              className="bg-gradient-primary hover:opacity-90 transition-opacity"
+              className="bg-gradient-primary hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-elegant hover:shadow-glow"
               onClick={() => window.open("https://drive.google.com/file/d/1siwlClBjPt45R8lquhO22dJApApCD8k6/view", "_blank")}
             >
               Check CV
