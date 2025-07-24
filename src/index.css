@@ -135,15 +135,22 @@ All colors MUST be HSL.
   
   .glass-luxury {
     background: var(--gradient-glass);
-    @apply backdrop-blur-xl border border-white/10 shadow-luxury;
+    @apply backdrop-blur-xl border border-white/10;
+    box-shadow: var(--shadow-luxury);
   }
   
   .hover-lift {
-    @apply transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-floating hover:scale-[1.02];
+    @apply transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.02];
+    box-shadow: var(--shadow-card);
+  }
+  
+  .hover-lift:hover {
+    box-shadow: var(--shadow-floating);
   }
   
   .hover-lift-subtle {
-    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-card;
+    @apply transition-all duration-300 ease-out hover:-translate-y-1;
+    box-shadow: var(--shadow-card);
   }
   
   .gradient-text {
