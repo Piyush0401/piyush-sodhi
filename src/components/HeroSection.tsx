@@ -138,10 +138,10 @@ const HeroSection = () => {
               </div>
               
               {/* Enhanced Floating badge */}
-              <div className="absolute -top-4 -right-4 glass-luxury rounded-xl px-6 py-3 shadow-floating hover-lift-subtle group">
+              <div className="absolute -top-4 -right-4 bg-background/95 backdrop-blur-md rounded-xl px-6 py-3 shadow-floating hover-lift-subtle group border border-border/50 hover:border-primary/30">
                 <div className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors duration-300">4th Year Student</div>
-                <div className="text-xs text-muted-foreground">ISE, AIT</div>
-                <div className="absolute inset-0 bg-gradient-primary/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="text-xs text-foreground/80 group-hover:text-primary/80 transition-colors duration-300 font-medium">ISE, AIT</div>
+                <div className="absolute inset-0 bg-gradient-primary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
             </div>
