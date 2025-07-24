@@ -76,13 +76,14 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-tl from-accent/5 via-transparent to-primary/5"></div>
-      <div className="absolute top-32 right-32 w-80 h-80 bg-gradient-primary rounded-full opacity-8 blur-3xl"></div>
-      <div className="absolute bottom-32 left-32 w-72 h-72 bg-gradient-secondary rounded-full opacity-8 blur-3xl"></div>
+    <section id="skills" className="section-padding bg-background relative overflow-hidden">
+      {/* Enhanced Background decoration */}
+      <div className="absolute inset-0 mesh-gradient"></div>
+      <div className="absolute top-32 right-32 w-80 h-80 bg-gradient-primary rounded-full opacity-12 blur-3xl animate-float"></div>
+      <div className="absolute bottom-32 left-32 w-72 h-72 bg-gradient-secondary rounded-full opacity-12 blur-3xl animate-pulse-slow"></div>
+      <div className="absolute top-1/3 left-1/2 w-60 h-60 bg-accent/10 rounded-full blur-2xl animate-float delay-2000"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container-padding relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
@@ -96,7 +97,7 @@ const SkillsSection = () => {
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="group shadow-card border-border/50 hover:shadow-glow transition-all duration-500 overflow-hidden bg-gradient-card backdrop-blur-sm hover-lift relative">
+            <Card key={index} className="group shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 overflow-hidden glass-luxury hover-lift relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="pb-4 relative z-10">
                 <CardTitle className="flex items-center gap-4 text-foreground text-xl">
@@ -142,7 +143,7 @@ const SkillsSection = () => {
           {otherDomains.map((domain, index) => (
             <Card 
               key={index} 
-              className="p-6 text-center shadow-card border-border/50 hover:shadow-glow hover-lift transition-all duration-300 bg-gradient-card backdrop-blur-sm group"
+              className="p-6 text-center shadow-card border-border/50 hover:shadow-luxury hover-lift transition-all duration-300 glass-luxury group"
             >
               <div className="flex flex-col items-center space-y-3">
                 <div className="p-3 bg-gradient-secondary rounded-xl text-accent-foreground group-hover:scale-110 transition-transform duration-300 shadow-elegant">
@@ -164,7 +165,7 @@ const SkillsSection = () => {
             { number: "14", label: "Frameworks/Tools/Libraries" },
             { number: "10", label: "Domains" }
           ].map((stat, index) => (
-            <Card key={index} className="group p-8 shadow-card border-border/50 hover:shadow-glow transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift overflow-hidden relative">
+            <Card key={index} className="group p-8 shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 glass-luxury hover-lift overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
                 <div className="text-5xl md:text-6xl font-bold gradient-text mb-4 group-hover:scale-110 transition-transform duration-300">{stat.number}</div>

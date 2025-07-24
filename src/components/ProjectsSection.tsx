@@ -152,13 +152,14 @@ const ProjectsSection = () => {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section id="projects" className="py-20 bg-gradient-accent relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
-      <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-primary rounded-full opacity-10 blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-secondary rounded-full opacity-10 blur-3xl"></div>
+    <section id="projects" className="section-padding bg-gradient-accent relative overflow-hidden">
+      {/* Enhanced Background decoration */}
+      <div className="absolute inset-0 mesh-gradient"></div>
+      <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-primary rounded-full opacity-15 blur-3xl animate-pulse-slow"></div>
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-secondary rounded-full opacity-15 blur-3xl animate-float"></div>
+      <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float delay-1500"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container-padding relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
@@ -192,7 +193,7 @@ const ProjectsSection = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <Card key={index} className="group shadow-card border-border/50 hover:shadow-hover transition-all duration-500 overflow-hidden bg-gradient-card backdrop-blur-sm hover-lift">
+            <Card key={index} className="group shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 overflow-hidden glass-luxury hover-lift">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-4">
                   <div className="p-3 bg-gradient-primary rounded-xl text-primary-foreground shadow-glow group-hover:scale-110 transition-transform duration-300">

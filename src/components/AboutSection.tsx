@@ -44,13 +44,14 @@ const AboutSection = () => {
   const languages = ["English", "Hindi", "Kannada"];
 
   return (
-    <section id="about" className="py-20 bg-gradient-accent relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
-      <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-secondary rounded-full opacity-10 blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-primary rounded-full opacity-10 blur-3xl"></div>
+    <section id="about" className="section-padding bg-gradient-accent relative overflow-hidden">
+      {/* Enhanced Background decoration */}
+      <div className="absolute inset-0 mesh-gradient"></div>
+      <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-secondary rounded-full opacity-15 blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-primary rounded-full opacity-15 blur-3xl animate-pulse-slow"></div>
+      <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-float delay-1000"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container-padding relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
@@ -64,7 +65,7 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Personal Info */}
           <div className="space-y-8">
-            <Card className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
+            <Card className="shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 glass-luxury hover-lift group">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-foreground text-xl">
                   <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground">
@@ -102,7 +103,7 @@ const AboutSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
+            <Card className="shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 glass-luxury hover-lift group">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-foreground text-xl">
                   <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground">
@@ -129,7 +130,7 @@ const AboutSection = () => {
 
           {/* Right Column - Certifications */}
           <div>
-            <Card className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
+            <Card className="shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 glass-luxury hover-lift group">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-foreground text-xl">
                   <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground">

@@ -52,13 +52,14 @@ const InternshipsSection = () => {
   ];
 
   return (
-    <section id="internships" className="py-20 bg-gradient-accent relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
-      <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-primary rounded-full opacity-10 blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-secondary rounded-full opacity-10 blur-3xl"></div>
+    <section id="internships" className="section-padding bg-gradient-accent relative overflow-hidden">
+      {/* Enhanced Background decoration */}
+      <div className="absolute inset-0 mesh-gradient"></div>
+      <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-primary rounded-full opacity-15 blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-secondary rounded-full opacity-15 blur-3xl animate-pulse-slow"></div>
+      <div className="absolute top-2/3 right-1/4 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-float delay-1000"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container-padding relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
@@ -89,7 +90,7 @@ const InternshipsSection = () => {
                 <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${
                   index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
                 }`}>
-                  <Card className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
+                  <Card className="shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 glass-luxury hover-lift group">
                     <CardHeader className="pb-4">
                       <div className="flex items-start justify-between mb-3">
                         <Badge 

@@ -115,13 +115,14 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-accent/5"></div>
-      <div className="absolute top-20 left-20 w-80 h-80 bg-gradient-secondary rounded-full opacity-8 blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-72 h-72 bg-gradient-primary rounded-full opacity-8 blur-3xl"></div>
+    <section id="contact" className="section-padding bg-background relative overflow-hidden">
+      {/* Enhanced Background decoration */}
+      <div className="absolute inset-0 mesh-gradient"></div>
+      <div className="absolute top-20 left-20 w-80 h-80 bg-gradient-secondary rounded-full opacity-12 blur-3xl animate-pulse-slow"></div>
+      <div className="absolute bottom-20 right-20 w-72 h-72 bg-gradient-primary rounded-full opacity-12 blur-3xl animate-float"></div>
+      <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-accent/8 rounded-full blur-3xl animate-float delay-2000"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container-padding relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
@@ -135,7 +136,7 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <Card className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
+            <Card className="shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 glass-luxury hover-lift group">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-foreground text-xl">
                   <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground">
@@ -177,7 +178,7 @@ const ContactSection = () => {
             </Card>
 
             {/* Additional Info */}
-            <Card className="shadow-card border-border/50 bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-500 hover-lift">
+            <Card className="shadow-card border-border/50 bg-gradient-primary text-primary-foreground hover:shadow-luxury transition-all duration-500 hover-lift group relative overflow-hidden">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Let's Build Something Amazing</h3>
                 <p className="text-primary-foreground/90 mb-6 leading-relaxed text-lg">
@@ -194,7 +195,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="shadow-card border-border/50 hover:shadow-hover transition-all duration-500 bg-gradient-card backdrop-blur-sm hover-lift">
+          <Card className="shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 glass-luxury hover-lift group">
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-foreground text-xl">
                 <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground">
@@ -282,7 +283,7 @@ const ContactSection = () => {
           </div>
 
           {/* Footer content */}
-          <div className="bg-gradient-card border border-border/30 rounded-3xl p-12 backdrop-blur-sm shadow-card hover:shadow-hover transition-all duration-500 relative overflow-hidden">
+          <div className="glass-luxury border border-border/30 rounded-3xl p-12 shadow-luxury hover:shadow-floating transition-all duration-500 relative overflow-hidden group">
             {/* Background decoration */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-50"></div>
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-primary rounded-full opacity-10 blur-2xl"></div>
