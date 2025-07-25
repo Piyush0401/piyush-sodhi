@@ -1,4 +1,4 @@
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Code, Database, Zap, Star, Sparkles, Circle, Triangle, Square, Diamond, Heart, Atom } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -37,6 +37,50 @@ const HeroSection = () => {
         <div className="absolute top-1/3 right-1/3 w-6 h-6 border border-primary-foreground/30 rotate-45 animate-float delay-1000"></div>
         <div className="absolute bottom-1/3 left-1/3 w-4 h-4 bg-accent/40 rounded-full animate-pulse-slow delay-1500"></div>
         <div className="absolute top-2/3 left-1/4 w-8 h-1 bg-primary-foreground/20 animate-float delay-2000"></div>
+        
+        {/* Animated Icons - Tech themed */}
+        <div className="absolute top-16 right-1/4 text-primary/30 animate-float delay-500">
+          <Code className="w-5 h-5 animate-pulse-slow" />
+        </div>
+        <div className="absolute bottom-1/4 right-16 text-primary-foreground/40 animate-bounce-slow delay-700">
+          <Database className="w-4 h-4" />
+        </div>
+        <div className="absolute top-1/2 left-20 text-accent/50 animate-float delay-1200">
+          <Zap className="w-6 h-6 animate-pulse" />
+        </div>
+        
+        {/* Sparkle and Star effects */}
+        <div className="absolute top-24 left-2/3 text-primary/25 animate-pulse delay-800">
+          <Star className="w-3 h-3" />
+        </div>
+        <div className="absolute bottom-16 left-1/2 text-primary-foreground/35 animate-float delay-1800">
+          <Sparkles className="w-4 h-4 animate-bounce-slow" />
+        </div>
+        <div className="absolute top-3/4 right-1/3 text-accent/40 animate-pulse-slow delay-2500">
+          <Star className="w-2 h-2" />
+        </div>
+        
+        {/* Geometric animated shapes */}
+        <div className="absolute top-1/4 left-16 text-primary/20 animate-spin-slow">
+          <Circle className="w-8 h-8" />
+        </div>
+        <div className="absolute bottom-1/2 right-12 text-primary-foreground/30 animate-float delay-1600">
+          <Triangle className="w-5 h-5" />
+        </div>
+        <div className="absolute top-1/2 right-1/2 text-accent/25 animate-bounce-slow delay-2200">
+          <Square className="w-3 h-3" />
+        </div>
+        
+        {/* Additional decorative elements */}
+        <div className="absolute bottom-1/4 left-12 text-primary/35 animate-pulse delay-1100">
+          <Diamond className="w-4 h-4" />
+        </div>
+        <div className="absolute top-2/3 right-20 text-primary-foreground/25 animate-float delay-1900">
+          <Heart className="w-3 h-3 animate-pulse-slow" />
+        </div>
+        <div className="absolute bottom-20 right-1/2 text-accent/30 animate-spin-slow delay-2800">
+          <Atom className="w-6 h-6" />
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 relative">

@@ -173,9 +173,6 @@ All colors MUST be HSL.
     animation: glow 2s ease-in-out infinite alternate;
   }
   
-  .animate-bounce-slow {
-    animation: bounce 3s ease-in-out infinite;
-  }
   
   .animate-pulse-slow {
     animation: pulse-slow 4s ease-in-out infinite;
@@ -183,6 +180,14 @@ All colors MUST be HSL.
   
   .animate-gradient {
     animation: gradient-shift 6s ease-in-out infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
   }
   
   .section-padding {
@@ -233,4 +238,22 @@ All colors MUST be HSL.
 @keyframes typewriter {
   from { width: 0; }
   to { width: 100%; }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { 
+    transform: translateY(0px);
+  }
+  50% { 
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes spin-slow {
+  from { 
+    transform: rotate(0deg);
+  }
+  to { 
+    transform: rotate(360deg);
+  }
 }
