@@ -109,7 +109,6 @@ const AboutSection = () => {
                             side="bottom" 
                             sideOffset={16} 
                             className="max-w-xs z-[9999] bg-popover border-border shadow-lg"
-                            avoidCollisions={false}
                           >
                             <p className="text-center font-medium">{language.message}</p>
                           </TooltipContent>
