@@ -71,7 +71,7 @@ const AboutSection = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left Column - Personal Info */}
             <div className="space-y-8">
-              <Card className="shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 glass-luxury hover-lift group">
+              <Card className="shadow-card border-border/50 hover:shadow-luxury transition-all duration-500 glass-luxury hover-lift group overflow-visible">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground text-xl">
                     <div className="p-2 bg-gradient-primary rounded-lg text-primary-foreground">
@@ -80,7 +80,7 @@ const AboutSection = () => {
                     Personal Information
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6">
+                <CardContent className="space-y-6 overflow-visible">
                   <p className="text-muted-foreground leading-relaxed text-lg">
                     Enthusiastic learner and problem solver passionate about programming, innovation, 
                     and building impactful tech solutions. I thrive on tackling complex challenges 
@@ -94,7 +94,7 @@ const AboutSection = () => {
                       </div>
                       Languages
                     </h4>
-                    <div className="flex flex-wrap gap-3 pb-8">
+                    <div className="flex flex-wrap gap-3 pb-12 relative">
                       {languages.map((language) => (
                         <Tooltip key={language.name}>
                           <TooltipTrigger asChild>
@@ -105,7 +105,12 @@ const AboutSection = () => {
                               {language.name}
                             </Badge>
                           </TooltipTrigger>
-                          <TooltipContent side="bottom" sideOffset={8} className="max-w-xs z-[60]">
+                          <TooltipContent 
+                            side="bottom" 
+                            sideOffset={16} 
+                            className="max-w-xs z-[9999] bg-popover border-border shadow-lg"
+                            avoidCollisions={false}
+                          >
                             <p className="text-center font-medium">{language.message}</p>
                           </TooltipContent>
                         </Tooltip>
