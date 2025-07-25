@@ -94,7 +94,7 @@ const AboutSection = () => {
                       </div>
                       Languages
                     </h4>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3 pb-8">
                       {languages.map((language) => (
                         <Tooltip key={language.name}>
                           <TooltipTrigger asChild>
@@ -105,7 +105,7 @@ const AboutSection = () => {
                               {language.name}
                             </Badge>
                           </TooltipTrigger>
-                          <TooltipContent side="bottom" sideOffset={12} align="center" className="max-w-xs z-50">
+                          <TooltipContent side="bottom" sideOffset={8} className="max-w-xs z-[60]">
                             <p className="text-center font-medium">{language.message}</p>
                           </TooltipContent>
                         </Tooltip>
