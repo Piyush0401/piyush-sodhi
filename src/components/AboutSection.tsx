@@ -105,7 +105,7 @@ const AboutSection = () => {
                               {language.name}
                             </Badge>
                           </TooltipTrigger>
-                          <TooltipContent side="bottom" className="max-w-xs">
+                          <TooltipContent side="bottom" sideOffset={8} className="max-w-xs">
                             <p className="text-center font-medium">{language.message}</p>
                           </TooltipContent>
                         </Tooltip>
