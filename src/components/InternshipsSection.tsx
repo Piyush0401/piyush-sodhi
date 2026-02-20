@@ -5,6 +5,21 @@ import { Badge } from "@/components/ui/badge";
 const InternshipsSection = () => {
   const internships = [
     {
+      title: "Front End Developer",
+      company: "Advertyzement Ltd",
+      location: "Remote",
+      period: "July 2025 – Present",
+      type: "Full-Time",
+      description: "Building and optimizing front-end applications across packaging, real estate, aggregate, and individual client domains using modern web technologies.",
+      technologies: ["React", "JavaScript", "Vite", "GraphQL", "Jest", "Web Scraping"],
+      achievements: [
+        "Developed and optimized front-end applications using React, JavaScript, and Vite, building four website UIs for packaging, real estate, aggregate domain, and Panditji (individual client) with real-world datasets",
+        "Designed and deployed a web scraping solution to collect, clean, and structure data, enabling efficient data integration and improving overall project functionality",
+        "Implemented unit and integration testing using Jest for pre-existing components",
+        "Improved application performance by developing a GraphQL query optimizer in JavaScript"
+      ]
+    },
+    {
       title: "Human Artificial Intelligence Intern",
       company: "IIT Gandhinagar",
       location: "Gandhinagar, India",
