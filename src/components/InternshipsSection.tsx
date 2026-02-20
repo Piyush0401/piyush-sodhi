@@ -9,7 +9,7 @@ const InternshipsSection = () => {
       company: "Advertyzement Ltd",
       location: "Remote",
       period: "July 2025 – Present",
-      type: "Full-Time",
+      type: "Internship",
       description: "Building and optimizing front-end applications across packaging, real estate, aggregate, and individual client domains using modern web technologies.",
       technologies: ["React", "JavaScript", "Vite", "GraphQL", "Jest", "Web Scraping"],
       achievements: [
