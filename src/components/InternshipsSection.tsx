@@ -68,10 +68,8 @@ const InternshipsSection = () => {
 
   return (
     <section id="internships" className="section-padding bg-background relative overflow-hidden">
-      {/* Subtle background accents */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] via-transparent to-primary/[0.03]"></div>
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/[0.04] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+      {/* Background decoration */}
+      <div className="absolute inset-0 mesh-gradient opacity-60 pointer-events-none" />
       
       <div className="container-padding relative z-10">
         {/* Section Header */}
