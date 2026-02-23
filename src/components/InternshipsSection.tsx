@@ -67,12 +67,10 @@ const InternshipsSection = () => {
   ];
 
   return (
-    <section id="internships" className="section-padding bg-gradient-accent relative overflow-hidden">
-      {/* Enhanced Background decoration */}
-      <div className="absolute inset-0 mesh-gradient"></div>
-      <div className="absolute top-20 right-20 w-80 h-80 bg-gradient-primary rounded-full opacity-15 blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 left-20 w-72 h-72 bg-gradient-secondary rounded-full opacity-15 blur-3xl animate-pulse-slow"></div>
-      <div className="absolute top-2/3 right-1/4 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-float delay-1000"></div>
+    <section id="internships" className="section-padding bg-background relative overflow-hidden">
+      {/* Subtle background accents */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/[0.03] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
       
       <div className="container-padding relative z-10">
         {/* Section Header */}
