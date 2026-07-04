@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +55,7 @@ const Navigation = () => {
             <Button 
               variant="default" 
               className="bg-gradient-primary hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-elegant hover:shadow-glow"
-              onClick={() => window.open("https://drive.google.com/file/d/1k86XE9aFUbWzZscW_3eeVohjXq3ALxXo/view?usp=sharing", "_blank")}
+              onClick={() => window.open(resumeAsset.url, "_blank")}
             >
               Check CV
             </Button>
@@ -89,7 +90,7 @@ const Navigation = () => {
               <div className="pt-2">
                 <Button 
                   className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
-                  onClick={() => window.open("https://drive.google.com/file/d/1k86XE9aFUbWzZscW_3eeVohjXq3ALxXo/view?usp=sharing", "_blank")}
+                  onClick={() => window.open(resumeAsset.url, "_blank")}
                 >
                   Check CV
                 </Button>
