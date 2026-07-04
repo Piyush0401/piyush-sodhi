@@ -35,20 +35,6 @@ const InternshipsSection = () => {
       ]
     },
     {
-      title: "Solution Architect (Virtual Experience)",
-      company: "AWS APAC",
-      location: "Remote",
-      period: "Jan–Feb 2025",
-      type: "Virtual Experience",
-      description: "Hosting architecture with AWS Elastic Beanstalk and performance optimization.",
-      technologies: ["AWS", "Elastic Beanstalk", "Cloud Architecture", "Cost Optimization"],
-      achievements: [
-        "Designed scalable hosting architecture using AWS Elastic Beanstalk",
-        "Performed comprehensive cost estimation and optimization",
-        "Implemented performance optimization strategies",
-        "Gained hands-on experience with AWS cloud services"
-      ]
-    },
     {
       title: "Data Science Intern",
       company: "SkillCraft Technology",
