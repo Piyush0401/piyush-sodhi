@@ -84,6 +84,19 @@ const AboutSection = () => {
                     and transforming ideas into functional, user-centered applications.
                   </p>
                   
+                  <a 
+                    href="https://piyushcreates.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-200 group"
+                  >
+                    Want to explore more of my work? 
+                    <span className="underline underline-offset-4 group-hover:underline-offset-2 transition-all duration-200">Check it out here</span>
+                    <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  
                   <div className="pt-6 border-t border-border">
                     <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2 text-lg">
                       <div className="p-1 bg-gradient-secondary rounded-lg text-accent-foreground">
