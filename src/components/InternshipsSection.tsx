@@ -5,11 +5,11 @@ import { Badge } from "@/components/ui/badge";
 const InternshipsSection = () => {
   const internships = [
     {
-      title: "Front End Developer",
+      title: "Software Engineer",
       company: "Advertyzement Ltd",
       location: "Remote",
       period: "July 2025 – Present",
-      type: "Internship",
+      type: "Full-time",
       description: "Building and optimizing front-end applications across packaging, real estate, aggregate, and individual client domains using modern web technologies.",
       technologies: ["React", "JavaScript", "Vite", "GraphQL", "Jest", "Web Scraping"],
       achievements: [
