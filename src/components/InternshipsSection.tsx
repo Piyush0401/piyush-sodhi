@@ -35,7 +35,6 @@ const InternshipsSection = () => {
       ]
     },
     {
-    {
       title: "Data Science Intern",
       company: "SkillCraft Technology",
       location: "Remote",
