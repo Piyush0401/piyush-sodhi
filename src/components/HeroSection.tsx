@@ -95,13 +95,12 @@ const HeroSection = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
                 <span className="block">Aspiring</span>
                 <span className="block">Full Stack</span>
-                <span className="block">Developer &</span>
-                <span className="block">Data Analyst</span>
+                <span className="block">Developer</span>
               </h1>
               
               <p className="text-lg text-primary-foreground/80 max-w-2xl">
-                Passionate Information Science student with hands-on experience in software development, 
-                data analysis, and cutting-edge technologies. Building innovative solutions for complex challenges.
+                Passionate Information Science student with hands-on experience in software development
+                and cutting-edge technologies.
               </p>
               
               {/* Social Links */}
